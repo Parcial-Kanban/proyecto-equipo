@@ -73,6 +73,38 @@
         <p class="cart-note">Añade tus productos desde el catálogo.</p>
         <ul id="carrito" class="carrito-list"></ul>
       </aside>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Nueva colección</p>
+        <h1>Catálogo de Productos</h1>
+        <p class="intro">Explora cada prenda, mira sus detalles y añade tu favorita al carrito en un solo paso.</p>
+      </div>
+      <aside class="cart-card" aria-label="Carrito de compras">
+        <h2>Carrito de compras</h2>
+        <p class="cart-note">Añade talla y producto desde el detalle.</p>
+        <ul id="carrito" class="carrito-list"></ul>
+      </aside>
+    </header>
+
+    <section class="content-grid">
+      <section class="catalogo" id="catalogo" aria-label="Catálogo de productos"></section>
+
+      <aside class="detalle-panel" aria-labelledby="detalle-titulo">
+        <p class="eyebrow">Vista rápida</p>
+        <img id="detalleImagen" class="detalle-imagen" src="img/producto1.svg" alt="Producto destacado">
+        <h2 id="detalleTitulo">Producto destacado</h2>
+        <p id="detalleDescripcion" class="detalle-descripcion">Selecciona un producto para ver su descripción, precio y tallas disponibles.</p>
+        <p class="precio-label">Precio</p>
+        <p id="detallePrecio" class="precio">$0</p>
+
+        <label for="detalleTalla" class="talla-label">Talla disponible</label>
+        <select id="detalleTalla" class="talla-select"></select>
+
+        <div class="detalle-actions">
+          <button id="btnAgregarDetalle" class="btn btn-primary" type="button">Añadir al carrito</button>
+          <a class="btn btn-secondary" href="#catalogo">Volver al catálogo</a>
+        </div>
+      </aside>
     </section>
   </main>
 </body>
