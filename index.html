@@ -2,29 +2,78 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo de Productos</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Catálogo de Productos</h1>
-  <div class="catalogo">
-    <div class="producto">
-      <img src="img/producto1.jpg" alt="Producto 1">
-      <h2>Producto 1</h2>
-      <p>Descripción breve del producto.</p>
-      <span class="precio">$20.000</span>
-      <button>Añadir al carrito</button>
-    </div>
-    <h2>Carrito de compras</h2>
-<ul id="carrito"></ul>
+  <main class="page-shell">
+    <header class="hero-card">
+      <div>
+        <p class="eyebrow">Tienda online</p>
+        <h1>Catálogo de Productos</h1>
+        <p class="intro">Explora la colección, gestiona tu carrito y usa los formularios de registro e inicio de sesión para una experiencia completa.</p>
+      </div>
 
-    <div class="producto">
-      <img src="img/producto2.jpg" alt="Producto 2">
-      <h2>Producto 2</h2>
-      <p>Descripción breve del producto.</p>
-      <span class="precio">$35.000</span>
-      <button>Añadir al carrito</button>
-    </div>
-  </div>
+      <section class="auth-panel" aria-label="Autenticación de usuarios">
+        <div class="auth-toggle" role="tablist" aria-label="Opciones de acceso">
+          <button class="tab-btn active" id="btnRegistro" type="button">Registrarse</button>
+          <button class="tab-btn" id="btnLogin" type="button">Iniciar sesión</button>
+        </div>
+
+        <form id="registerForm" class="auth-form active-form" novalidate>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Tu nombre completo" required>
+
+          <label for="correoRegistro">Correo</label>
+          <input id="correoRegistro" name="correo" type="email" placeholder="correo@ejemplo.com" required>
+
+          <label for="passwordRegistro">Contraseña</label>
+          <input id="passwordRegistro" name="password" type="password" placeholder="Mínimo 6 caracteres" required>
+
+          <button class="btn btn-primary" type="submit">Registrarse</button>
+        </form>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <label for="correoLogin">Correo</label>
+          <input id="correoLogin" name="correo" type="email" placeholder="correo@ejemplo.com" required>
+
+          <label for="passwordLogin">Contraseña</label>
+          <input id="passwordLogin" name="password" type="password" placeholder="Tu contraseña" required>
+
+          <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+        </form>
+
+        <p id="authMessage" class="auth-message" aria-live="polite"></p>
+      </section>
+    </header>
+
+    <section class="content-grid">
+      <section class="catalogo" aria-label="Catalogo de productos">
+        <article class="producto">
+          <img src="img/producto1.svg" alt="Producto 1">
+          <h2>Producto 1</h2>
+          <p>Descripción breve del producto.</p>
+          <span class="precio">$20.000</span>
+          <button type="button">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="img/producto2.svg" alt="Producto 2">
+          <h2>Producto 2</h2>
+          <p>Descripción breve del producto.</p>
+          <span class="precio">$35.000</span>
+          <button type="button">Añadir al carrito</button>
+        </article>
+      </section>
+
+      <aside class="cart-card" aria-label="Carrito de compras">
+        <h2>Carrito de compras</h2>
+        <p class="cart-note">Añade tus productos desde el catálogo.</p>
+        <ul id="carrito" class="carrito-list"></ul>
+      </aside>
+    </section>
+  </main>
 </body>
 </html>
